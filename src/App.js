@@ -23,7 +23,7 @@ function App() {
       .then((res) => res.json())
       .then((data) => {
         setMovies(data.results);
-        console.log(data)
+        console.log(data.results[0].original_title)
       });
   }
 
@@ -52,8 +52,9 @@ function App() {
       </header>
       <div className="movie-container">
 
-        {movies.map((movie) =>
-          <Movies key={movie.id} {...movie} />
+        {movies.length > 0 && movies.map((movie) =>
+          <Movies key={movie.id} {...movie}  />
+          
         )}
         <Movies />
       </div>

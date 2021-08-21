@@ -2,7 +2,7 @@ import react from 'react';
 
 const IMG_API = "https://image.tmdb.org/t/p/w1280";
 
-function Movies({title , poster_path , overview , vote_average}){
+function Movies({title , poster_path , overview , vote_average ,release_date}){
     return(
         <div className="movie">
             
@@ -14,6 +14,7 @@ function Movies({title , poster_path , overview , vote_average}){
             <div className="movie-over">
                 <h2>Overview:</h2>
                 <p>{overview}</p>
+                <span>Release: {release_date}</span>
             </div>
         </div>
     )
